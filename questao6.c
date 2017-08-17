@@ -14,11 +14,11 @@ for(i=strlen(nome)-1; i>=0; i--) {
     inverso[p]='\0'; }
 
 if(strcmp(nome, inverso)==0) {
-    printf("E palindromo");
+    printf("\nE palindromo\n");
 }
 else
 {
-    printf("Nao e palindromo"); }
+    printf("\nNao e palindromo"); }
 return 0;
 }
 
