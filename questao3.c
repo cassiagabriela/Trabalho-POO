@@ -13,11 +13,12 @@ int main()
             num/=2;
             i--;
             j--;
-        }-
+        }
         for(i=0; i<j; i++) {
             vetor[i]=0;
             vetor[j]=1;
         }
+	 printf("Numero convertido: ");
         for(i=0; i<8; i++) {
             printf("%2d", vetor[i]);
         }}
