@@ -1,28 +1,29 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdlib.h>
+#include <stdio.h>
 
-char verificar(int n) {
+int numeroPrimo(int num){
+    int i, aux=2;
+  for(i=num-1;i>1;i--){
+        if(num%i == 0){
+            return 0;
+        } }
+    return 1;}
 
-int cont;
-char valor;
+int main(){
+    int num, aux=0, i=1;
+    printf("Informe um numero: ");
+    scanf("%d", &num);
 
-if((n%1)==0) {
-    cont++;
-    if((n%n)==0)
-        cont ++;
-         if((n%2)==0)
-            cont ++;
-}
-if (cont=3)
-    return 'F';
-else
-    return 'V';
-}
-int main() {
- int n;
-char res;
-printf("Digite um numero:");
-scanf("%d", &n);
-res=verificar(int n);
-return 0;
+    if(numeroPrimo(num)==1){
+        printf("E PRIMO\n"); }
+    else
+        printf("Nao e primo");
+
+    printf("\nOs primeiros numeros primos sao:\n");
+    while(aux < num){
+        if(numeroPrimo(i)){
+            printf("%d\n", i);
+            aux++;
+        } i++; }
+  return 0;
 }
