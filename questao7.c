@@ -1,36 +1,33 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-
+#include <math.h>
 int raizes(int a, int b, int c) {
-
-    int x, aux;
-    x=(b*b)-(4*a*c);
-
-    if(x<0)
-        return 0;
-    else if (x==0)
-        return 1;
-    else
-        return 2;
-
-}
-
+    int delta;
+    delta=(b*b)-(4*a*c);
+    return delta; }
 int main()
 {
-    int a, b, c, res, resultado;
+    int a, b, c, resultado, x1, x2, x3;
     printf("Digite o valor de A:");
     scanf("%d", &a);
     printf("Digite o valor de B:");
     scanf("%d", &b);
     printf("Digite o valor de C:");
     scanf("%d", &c);
-    res=raizes(a, b,c);
-    resultado=raizes(0);
+    raizes(a, b,c);
+    resultado=raizes(a, b, c);
+    x1=(-b + sqrt(resultado)) /(2*a);
+    x2=(-b - sqrt(resultado)) / (2*a);
+    x3=(-b - sqrt(resultado));
+    if(resultado==0) {
+    printf("\n\nSTATUS 0\n");
+    printf("SEM RAIZES"); }
+    else if(resultado==1) {
+    printf("\n\nSTATUS 1\n\n");
+    printf("A raiz e: %d", x3); }
+    else {
+    printf("\n\nSTATUS 2\n\n");
+    printf("As raizes sao: %d e %d", x1, x2); }
 
-    printf("%d",resultado);
-
-
-
-    return 0;
+return 0;
 }
